@@ -14,6 +14,12 @@ app.get('/api',(req,res) => {
     res.send(statement);
 });
 
+app.get('/api/:num',(req,res) => {
+    const {num} = req.params; // get num parameter from request
+    let statements = generateStatement(num);
+    res.send(statements);
+});
+
 app.all('*',(req,res)=>{
     res.status(404).send("<h1>That resource isn't here, but have you tried looking for it?</h1>")
 })
