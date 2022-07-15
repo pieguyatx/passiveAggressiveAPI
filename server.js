@@ -24,7 +24,8 @@ app.all('*',(req,res)=>{
     res.status(404).send("<h1>That resource isn't here, but have you tried looking for it?</h1>")
 })
 
-app.listen(3000, () => {
+// When deploying, Heroku assigns port via .env file, so give options
+app.listen(process.env.PORT || 3000, () => {
     console.log("The Passive-Aggressive API server is finally running for once!");
 });
 
