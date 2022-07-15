@@ -1,0 +1,15 @@
+{
+  "name": "passiveaggressiveapi",
+  "version": "1.0.0",
+  "description": "Project to develop skills in node.js/Express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Pius Wong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
