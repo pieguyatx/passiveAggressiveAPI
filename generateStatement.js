@@ -1,7 +1,7 @@
-const generateStatement = () => {
+const generateStatement = (seed) => {
 
     let statement = "";
-    let singularGrammar = (Math.random()>0.5) ? true : false;
+    let singularGrammar = (seed*Math.random()>0.5) ? true : false;
 
     if(singularGrammar){
         let statementSingular = `That shirt was looking really fine for a while. `;

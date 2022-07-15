@@ -1,12 +1,16 @@
+// server file
 const express = require('express');
 const app = express();
 const generateStatement = require('./generateStatement');
 
+app.use(express.static('public')); // for front-end file access
+
 app.get('/',(req,res) => {
-    res.send('<h1>Passive-Aggressive API</h1>');
+    res.status(200).sendFile('views/index.html', { root : __dirname});
 });
 
 app.get('/api',(req,res) => {
+    let statement = generateStatement(1);
     res.send(statement);
 });
 
