@@ -3,7 +3,7 @@ $(document).ready(function(){
     // get example statement
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:3000/api',
+        url: 'https://passiveaggressive.herokuapp.com/api',
         success: handleSuccess,
         error: handleError
     });
